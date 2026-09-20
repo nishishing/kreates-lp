@@ -45,14 +45,8 @@ nav a{color:var(--soft);text-decoration:none}nav a:hover{color:var(--brand)}
 .cta{display:inline-flex;align-items:center;gap:7px;background:var(--brand);color:#fff!important;
  text-decoration:none;font-weight:800;border-radius:999px;padding:10px 18px;white-space:nowrap}
 .cta.big{font-size:16px;padding:15px 30px}
-.cta:focus-visible,.tab:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+.cta:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
 @media(max-width:820px){nav .nl{display:none}}
-/* audience switch */
-.tabs{display:inline-flex;background:var(--alt);border:1px solid var(--line);border-radius:999px;padding:4px;gap:4px}
-.tab{font:inherit;font-weight:800;font-size:13.5px;border:0;background:transparent;color:var(--soft);
- padding:8px 18px;border-radius:999px;cursor:pointer}
-.tab[aria-selected="true"]{background:var(--brand);color:#fff}
-body[data-aud="salon"] .corp,body[data-aud="corp"] .salon{display:none}
 /* hero */
 .hero{padding-top:clamp(24px,4vw,44px)}
 .eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--brand);
@@ -131,7 +125,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
 .disc{font-size:11.5px;color:var(--faint);margin-top:10px}
 </style>
 </head>
-<body data-aud="salon">
+<body>
 
 <header class="head">
   <div class="wrap row">
@@ -148,19 +142,13 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
 
 <section class="hero">
   <div class="wrap">
-    <div class="tabs" role="tablist" aria-label="ご覧になる方">
-      <button class="tab" role="tab" data-aud="salon" aria-selected="true">美容室の方</button>
-      <button class="tab" role="tab" data-aud="corp" aria-selected="false">企業の方</button>
-    </div>
-    <p class="eyebrow" style="margin-top:16px">TikTok / Instagram / YouTube Shorts 運用代行</p>
+    <p class="eyebrow">TikTok / Instagram / YouTube Shorts 運用代行</p>
     <h1>
-      <span class="salon">お店のSNSを、</span><span class="corp">自社のSNSを、</span><br>
-      <em>企画から撮影・運用まで</em>まるごと代行。
+      SNSを、<em>企画から撮影・運用まで</em><br>まるごと代行。
     </h1>
     <p class="lead">
       企画・台本づくり、プロ機材での撮影、編集、投稿後の分析・改善までを一気通貫で。
-      <span class="salon">撮影日にご協力いただくだけで、月8本の動画が仕上がります。</span>
-      <span class="corp">撮影日にご協力いただくだけで、商業クオリティの動画が続けられる形で仕上がります。</span>
+      美容室・店舗・中小企業まで、<b>撮影日にご協力いただくだけ</b>で、月8本の動画が続けられる形で仕上がります。
     </p>
     <div class="stats">
       <div class="stat"><b>月8本</b><span>企画・台本の作成<br>（フルパックは実質16本）</span></div>
@@ -177,22 +165,20 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
 
 <section id="inout" style="background:var(--alt)">
   <div class="wrap">
-    <div class="sec-h"><span class="no">1</span><h2><span class="salon">ホットペッパー運用との役割分担</span><span class="corp">いま使っている集客媒体の「中」と「外」</span></h2></div>
+    <div class="sec-h"><span class="no">1</span><h2>いま使っている集客媒体の「中」と「外」</h2></div>
     <div class="inout">
       <div class="card">
-        <p class="k"><span class="salon">ホットペッパーの「中」</span><span class="corp">媒体の「中」</span></p>
+        <p class="k">媒体の「中」</p>
         <h3>すでに探している人に、選ばれる</h3>
-        <p class="salon">スタイル掲載・SEO・口コミ対策。「この地域で美容室を探している」お客様の中で上位に出て、比較検討で勝つための施策です。母数はエリアの検索数が上限になります。</p>
-        <p class="corp">ポータルサイト・検索広告・Googleマップなど。「いま探している」お客様の中で上位に出て、比較検討で勝つための施策です。母数は、その商圏の検索数が上限になります。</p>
+        <p>ホットペッパー、ポータルサイト、検索広告、Googleマップなど。<b>「いま探している」</b>お客様の中で上位に出て、比較検討で勝つための施策です。母数は、その商圏の検索数が上限になります。</p>
       </div>
       <div class="card out">
-        <p class="k"><span class="salon">ホットペッパーの「外」＝ KREATES</span><span class="corp">媒体の「外」＝ KREATES</span></p>
+        <p class="k">媒体の「外」＝ KREATES</p>
         <h3>まだ知らない人に、見つけてもらう</h3>
-        <p class="salon">TikTok・Instagram・YouTube Shorts。探していないお客様のスクロールを止めて、お店とスタッフを知ってもらう施策です。新規の母数そのものを増やせます。</p>
-        <p class="corp">TikTok・Instagram・YouTube Shorts。探していないお客様のスクロールを止めて、会社と人を知ってもらう施策です。指名検索そのものを増やせます。</p>
+        <p>TikTok・Instagram・YouTube Shorts。<b>探していない</b>お客様のスクロールを止めて、お店や会社と、そこにいる人を知ってもらう施策です。新規の母数そのものを増やせます。</p>
       </div>
     </div>
-    <p class="disc">※ 両者は競合せず補完関係にあります。<span class="salon">ホットペッパー運用と併用いただくことで、指名検索の増加とスタイル閲覧数の底上げが期待できます。</span><span class="corp">既存の集客施策と併用いただくことで、指名検索・直接のお問い合わせの増加が期待できます。</span></p>
+    <p class="disc">※ 両者は競合せず補完関係にあります。既存の集客施策と併用いただくことで、指名検索の増加と、直接のご予約・お問い合わせの底上げが期待できます。</p>
   </div>
 </section>
 
@@ -224,13 +210,13 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
         <div class="name">企画プラン</div>
         <div class="price">¥50,000<small>/月</small></div>
         <div class="single">単月のみ ¥60,000</div>
-        <p>伸びる<b>企画・台本を月8本</b>ご提供。撮影・編集は<span class="salon">貴店</span><span class="corp">貴社</span>で対応いただくプランです。</p>
+        <p>伸びる<b>企画・台本を月8本</b>ご提供。撮影・編集はご自身で対応いただくプランです。</p>
       </div>
       <div class="plan">
         <div class="name">編集プラン</div>
         <div class="price">¥150,000<small>/月</small></div>
         <div class="single">単月のみ ¥180,000</div>
-        <p>企画・台本に加えて<b>編集・仕上げまで代行</b>。撮影のみ<span class="salon">貴店</span><span class="corp">貴社</span>で行っていただきます。</p>
+        <p>企画・台本に加えて<b>編集・仕上げまで代行</b>。撮影のみご自身で行っていただきます。</p>
       </div>
       <div class="plan best">
         <span class="badge">おすすめ</span>
@@ -252,8 +238,8 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
         <thead><tr><th>プラン内容</th><th class="c">企画<br>¥50,000</th><th class="c">編集<br>¥150,000</th><th class="c">撮影<br>¥240,000</th><th class="c">フルパック<br>¥320,000</th></tr></thead>
         <tbody>
           <tr><th>企画・台本作成（月8本）</th><td class="c dot">●代行</td><td class="c dot">●代行</td><td class="c dot">●代行</td><td class="c dot">●代行</td></tr>
-          <tr><th>撮影（月1日／機材・スタッフ込み）</th><td class="c">○自社で</td><td class="c">○自社で</td><td class="c dot">●代行</td><td class="c dot">●代行</td></tr>
-          <tr><th>編集・仕上げ（月8本）</th><td class="c">○自社で</td><td class="c dot">●代行</td><td class="c dot">●代行</td><td class="c dot">●代行</td></tr>
+          <tr><th>撮影（月1日／機材・スタッフ込み）</th><td class="c">○ご自身で</td><td class="c">○ご自身で</td><td class="c dot">●代行</td><td class="c dot">●代行</td></tr>
+          <tr><th>編集・仕上げ（月8本）</th><td class="c">○ご自身で</td><td class="c dot">●代行</td><td class="c dot">●代行</td><td class="c dot">●代行</td></tr>
           <tr><th>ABパターン展開（実質16本以上）</th><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c dot">●代行</td></tr>
           <tr><th>アカウント設計・戦略立案（初回）</th><td class="c">+¥50,000</td><td class="c">+¥50,000</td><td class="c">+¥50,000</td><td class="c dot">●込み</td></tr>
           <tr><th>媒体別の配信設計・投稿</th><td class="c">—</td><td class="c">—</td><td class="c">○ご相談</td><td class="c dot">●代行</td></tr>
@@ -264,7 +250,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
       </table>
     </div>
     <p class="hint">← 横にスクロールできます →</p>
-    <p class="disc">● こちらで代行　○ ご利用・<span class="salon">貴店</span><span class="corp">貴社</span>で対応　— なし<br>
+    <p class="disc">● こちらで代行　○ ご利用・ご自身で対応　— なし<br>
       ※ 価格はすべて税抜。表示の月額は<b>半年契約以上</b>の場合の金額です。単月でのご依頼も承ります（各プランカード内の金額）。<br>
       ※ 撮影は<b>1日あたり半日〜1日</b>を目安に、8本分をまとめて撮影します。撮影日を追加する場合は別途申し受けます。<br>
       ※ 月契約は<b>最低6ヶ月</b>から。7ヶ月目以降は1ヶ月単位で継続・終了をお選びいただけます。</p>
@@ -287,14 +273,14 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
     <div class="sec-h"><span class="no">4</span><h2>毎月の進み方</h2></div>
     <div class="grid g4">
       <div class="card"><p class="k">1週目</p><h3>企画・台本のご共有</h3><p>その月の8本の企画をお出しし、内容をご確認いただきます。</p></div>
-      <div class="card"><p class="k">2週目</p><h3>撮影</h3><p><span class="salon">定休日や営業前後に伺い、</span><span class="corp">休業日や業務の合間に伺い、</span>半日〜1日で8本分を撮影します。</p></div>
+      <div class="card"><p class="k">2週目</p><h3>撮影</h3><p>定休日・休業日や、営業前後・業務の合間に伺い、半日〜1日で8本分を撮影します。</p></div>
       <div class="card"><p class="k">3週目</p><h3>編集・納品</h3><p>編集・仕上げを行い、投稿できる状態でお渡しします。</p></div>
       <div class="card"><p class="k">4週目</p><h3>分析・翌月の設計</h3><p>数字を確認し、伸びた企画を翌月の台本に反映します。</p></div>
     </div>
 
     <div class="sec-h" style="margin-top:34px"><span class="no">5</span><h2>導入の流れ</h2></div>
     <div class="grid g4">
-      <div class="card"><p class="k">1</p><h3>お打ち合わせ</h3><p><span class="salon">お店</span><span class="corp">貴社</span>の状況と目標をお伺いし、プランをご提案します。</p></div>
+      <div class="card"><p class="k">1</p><h3>お打ち合わせ</h3><p>いまの状況と目標をお伺いし、プランをご提案します。</p></div>
       <div class="card"><p class="k">2</p><h3>アカウント設計</h3><p>誰に何を届けるか、投稿の方向性と目標数値を決めます。</p></div>
       <div class="card"><p class="k">3</p><h3>企画・台本のご共有</h3><p>初月分の企画をお出しし、内容をご確認いただきます。</p></div>
       <div class="card"><p class="k">4</p><h3>撮影・運用開始</h3><p>撮影日を調整して制作開始。以降は毎月このサイクルです。</p></div>
@@ -302,13 +288,13 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
   </div>
 </section>
 
-<section class="corp" style="background:var(--alt)">
+<section style="background:var(--alt)">
   <div class="wrap">
     <div class="sec-h"><span class="no">6</span><h2>これまでの制作実績</h2></div>
     <div class="grid g3">
       <div class="card"><p class="k">都内の商店街</p><h3>公式の連続ドラマ</h3><p>地域の店舗を横断して登場させ、街全体への来訪動機をつくりました。</p></div>
       <div class="card"><p class="k">大型レジャー施設</p><h3>観光PRのショートドラマ</h3><p>施設紹介ではなく物語で見せることで、最後まで見られる構成にしました。</p></div>
-      <div class="card"><p class="k">地域の企業・店舗</p><h3>縦型ショート動画とSNS運用</h3><p>中小企業・商店街を中心に、継続的にご支援しています。</p></div>
+      <div class="card"><p class="k">地域の企業・店舗</p><h3>縦型ショート動画とSNS運用</h3><p>美容室・中小企業・商店街を中心に、継続的にご支援しています。</p></div>
     </div>
     <p class="disc">※ 守秘のため企業名は非公開としています。詳細は個別にご説明いたします。</p>
   </div>
@@ -316,17 +302,17 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
 
 <section id="faq">
   <div class="wrap">
-    <div class="sec-h"><span class="no">6</span><h2>よくあるご質問</h2></div>
+    <div class="sec-h"><span class="no">7</span><h2>よくあるご質問</h2></div>
     <details><summary>スタッフが顔出しを嫌がっています</summary>
-      <p class="a"><span class="salon">手元・施術シーン・後ろ姿を中心にした企画でも制作できます。</span><span class="corp">手元・作業風景・後ろ姿を中心にした企画でも制作できます。</span>顔出しできる方が何名いるかで企画の幅が変わりますので、初回の打ち合わせでご相談ください。</p></details>
+      <p class="a">手元・施術・作業風景・後ろ姿を中心にした企画でも制作できます。顔出しできる方が何名いるかで企画の幅が変わりますので、初回の打ち合わせでご相談ください。</p></details>
     <details><summary>どれくらいで結果が出ますか</summary>
       <p class="a">3ヶ月を目安にお考えください。1〜2ヶ月目は当たる企画の型を探す期間で、3ヶ月目以降に伸びはじめるケースが多いです。</p></details>
-    <details><summary><span class="salon">撮影は営業中でもできますか</span><span class="corp">撮影は業務中でもできますか</span></summary>
-      <p class="a"><span class="salon">定休日や営業前後での撮影が中心です。</span><span class="corp">休業日や業務の合間での撮影が中心です。</span>1回あたり半日〜1日で、8本分をまとめて撮影します。日程は前月中に調整いたします。</p></details>
+    <details><summary>撮影は営業中・業務中でもできますか</summary>
+      <p class="a">定休日・休業日や、営業前後・業務の合間での撮影が中心です。1回あたり半日〜1日で、8本分をまとめて撮影します。日程は前月中に調整いたします。</p></details>
     <details><summary>途中でプランを変更できますか</summary>
       <p class="a">翌月からの変更を承ります。企画プランからはじめて、慣れてきたら撮影プランへ、といったご利用も可能です。</p></details>
     <details><summary>納品した動画は自由に使えますか</summary>
-      <p class="a"><span class="salon">貴店の広告・店内サイネージ・採用など、</span><span class="corp">貴社の広告・展示会・店頭サイネージ・採用など、</span>用途を問わずご利用いただけます。データもお渡しします。</p></details>
+      <p class="a">広告・店頭サイネージ・展示会・採用など、用途を問わずご利用いただけます。データもお渡しします。</p></details>
   </div>
 </section>
 
@@ -349,7 +335,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
   <div class="wrap">
     <div class="final">
       <h2>まずは、現状のアカウントを拝見するところから。</h2>
-      <p>いまの投稿内容と<span class="salon">競合店</span><span class="corp">競合他社</span>の状況を確認したうえで、どのプランが合うかをご提案します。<br>
+      <p>いまの投稿内容と競合の状況を確認したうえで、どのプランが合うかをご提案します。<br>
         ご相談・お見積りは無料です。企画のみ・編集のみといった部分的なご相談も承っております。</p>
       <a class="cta big" href="https://lin.ee/y0r6N4U" target="_blank" rel="noopener noreferrer">LINEで相談する →</a>
     </div>
@@ -365,13 +351,5 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
   </div>
 </footer>
 
-<script>
-document.querySelectorAll(".tab").forEach(function(b){
-  b.addEventListener("click",function(){
-    document.body.dataset.aud=b.dataset.aud;
-    document.querySelectorAll(".tab").forEach(function(x){x.setAttribute("aria-selected", x===b ? "true":"false")});
-  });
-});
-</script>
 </body>
 </html>
