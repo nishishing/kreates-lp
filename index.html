@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KREATES｜ショート動画の企画から撮影・運用までまるごと代行</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="TikTok / Instagram / YouTube Shorts。企画・台本づくり、プロ機材での撮影、編集、投稿後の分析・改善までを一気通貫で。月8本・月額¥50,000〜。">
+<style>
+:root{
+  --bg:#fafafc; --paper:#fff; --alt:#f4f5fb; --ink:#17181d; --soft:#5a5f70; --faint:#9296a6;
+  --brand:#4f46e5; --deep:#3730a3; --tint:#eef0ff; --line:#e6e7f2; --line2:#d5d7e6;
+  --warn:#8a5a1f; --warn-bg:#fdf6ea;
+  --maxw:1120px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#101018; --paper:#181924; --alt:#14151f; --ink:#eceef6; --soft:#a3a8bb; --faint:#767b8f;
+  --brand:#8f88ff; --deep:#b6b0ff; --tint:#1e2036; --line:#2a2c3d; --line2:#3a3d52;
+  --warn:#e0b077; --warn-bg:#241d12;
+}}
+:root[data-theme="dark"]{
+  --bg:#101018; --paper:#181924; --alt:#14151f; --ink:#eceef6; --soft:#a3a8bb; --faint:#767b8f;
+  --brand:#8f88ff; --deep:#b6b0ff; --tint:#1e2036; --line:#2a2c3d; --line2:#3a3d52;
+  --warn:#e0b077; --warn-bg:#241d12;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.85;
+ font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+ -webkit-text-size-adjust:100%;font-size:15px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+section{padding:clamp(34px,5.5vw,62px) 0}
+[id]{scroll-margin-top:78px}
+h2{font-size:clamp(20px,3vw,28px);font-weight:800;margin:0;letter-spacing:.01em;text-wrap:balance}
+h3{margin:0;font-weight:800}
+p{margin:0}
+a{color:inherit}
+/* header */
+.head{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);
+ backdrop-filter:blur(10px) saturate(1.4);-webkit-backdrop-filter:blur(10px) saturate(1.4);border-bottom:1px solid var(--line)}
+.head .row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 0}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:19px;letter-spacing:.08em}
+.logo i{width:22px;height:22px;border-radius:6px;background:var(--brand);display:block}
+nav{display:flex;align-items:center;gap:20px;font-size:13.5px;font-weight:700}
+nav a{color:var(--soft);text-decoration:none}nav a:hover{color:var(--brand)}
+.cta{display:inline-flex;align-items:center;gap:7px;background:var(--brand);color:#fff!important;
+ text-decoration:none;font-weight:800;border-radius:999px;padding:10px 18px;white-space:nowrap}
+.cta.big{font-size:16px;padding:15px 30px}
+.cta:focus-visible,.tab:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+@media(max-width:820px){nav .nl{display:none}}
+/* audience switch */
+.tabs{display:inline-flex;background:var(--alt);border:1px solid var(--line);border-radius:999px;padding:4px;gap:4px}
+.tab{font:inherit;font-weight:800;font-size:13.5px;border:0;background:transparent;color:var(--soft);
+ padding:8px 18px;border-radius:999px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--brand);color:#fff}
+body[data-aud="salon"] .corp,body[data-aud="corp"] .salon{display:none}
+/* hero */
+.hero{padding-top:clamp(24px,4vw,44px)}
+.eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--brand);
+ background:var(--tint);border-radius:999px;padding:5px 13px}
+h1{font-size:clamp(27px,4.6vw,44px);line-height:1.42;font-weight:800;margin:18px 0 0;letter-spacing:.01em}
+h1 em{font-style:normal;color:var(--brand)}
+.lead{color:var(--soft);margin-top:16px;max-width:52ch;font-size:clamp(14.5px,1.6vw,16.5px)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;margin-top:26px}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.stat b{display:block;font-size:clamp(19px,2.4vw,25px);font-weight:800;color:var(--brand);letter-spacing:-.01em;
+ font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--soft);font-weight:600}
+.hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:26px}
+.hero-actions .note{font-size:12.5px;color:var(--faint)}
+/* generic cards */
+.sec-h{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.sec-h .no{flex:none;min-width:24px;height:24px;padding:0 7px;border-radius:7px;background:var(--brand);color:#fff;
+ font-size:12.5px;font-weight:800;display:grid;place-items:center}
+.grid{display:grid;gap:12px}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:900px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.g4,.g3,.g2{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:17px 18px}
+.card h3{font-size:15.5px;margin-bottom:6px}
+.card p{font-size:13.5px;color:var(--soft)}
+.card .k{font-size:12px;font-weight:800;color:var(--brand);letter-spacing:.06em}
+/* inout */
+.inout{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:760px){.inout{grid-template-columns:1fr}}
+.inout .card{padding:20px}
+.inout .card.out{border:2px solid var(--brand);background:var(--tint)}
+.inout h3{font-size:17px;margin:6px 0 8px}
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media(max-width:1000px){.plans{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.plans{grid-template-columns:1fr}}
+.plan{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.plan.best{border:2px solid var(--brand)}
+.badge{align-self:flex-start;font-size:11.5px;font-weight:800;color:#fff;background:var(--brand);border-radius:999px;padding:3px 11px}
+.badge.soft{background:var(--tint);color:var(--deep)}
+.plan .name{font-size:16.5px;font-weight:800}
+.plan .price{font-size:26px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.plan .price small{font-size:13px;font-weight:700;color:var(--faint)}
+.plan .single{font-size:12px;color:var(--faint)}
+.plan p{font-size:13px;color:var(--soft)}
+.scroller{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:660px;font-size:13px}
+th,td{padding:11px 13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+thead th{background:var(--alt);font-size:12.5px;white-space:nowrap}
+tbody th{font-weight:700;color:var(--ink)}
+td.c{text-align:center;white-space:nowrap}
+.dot{color:var(--brand);font-weight:800}
+.hint{font-size:12px;color:var(--faint);margin-top:8px;text-align:center}
+/* faq */
+details{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:0 16px;margin-bottom:9px}
+summary{cursor:pointer;list-style:none;display:flex;gap:11px;align-items:center;padding:14px 0;font-weight:800;font-size:14.5px}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"Q";flex:none;width:23px;height:23px;border-radius:7px;background:var(--tint);color:var(--brand);
+ display:grid;place-items:center;font-size:12px}
+summary:after{content:"+";margin-left:auto;color:var(--faint);font-size:19px}
+details[open] summary:after{content:"−"}
+details .a{margin:0 0 14px 34px;font-size:13.5px;color:var(--soft)}
+/* notes */
+.note-box{background:var(--warn-bg);border:1px solid var(--line2);border-radius:14px;padding:16px 18px}
+.note-box h3{font-size:14px;color:var(--warn);margin-bottom:7px}
+.note-box li{font-size:13px;color:var(--soft);margin-bottom:4px}
+ul{margin:0;padding-left:1.15em}
+/* final */
+.final{background:var(--tint);border-radius:20px;padding:clamp(24px,4vw,42px);text-align:center}
+.final h2{margin-bottom:10px}
+.final p{color:var(--soft);font-size:14px;margin-bottom:20px}
+footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);font-size:12.5px}
+.disc{font-size:11.5px;color:var(--faint);margin-top:10px}
+</style>
+</head>
+<body data-aud="salon">
+
+<header class="head">
+  <div class="wrap row">
+    <div class="logo"><i></i>KREATES</div>
+    <nav>
+      <a class="nl" href="#inout">考え方</a>
+      <a class="nl" href="#plans">プラン・料金</a>
+      <a class="nl" href="#flow">進め方</a>
+      <a class="nl" href="#faq">よくある質問</a>
+      <a class="cta" href="https://lin.ee/y0r6N4U" target="_blank" rel="noopener noreferrer">LINEで相談</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="tabs" role="tablist" aria-label="ご覧になる方">
+      <button class="tab" role="tab" data-aud="salon" aria-selected="true">美容室の方</button>
+      <button class="tab" role="tab" data-aud="corp" aria-selected="false">企業の方</button>
+    </div>
+    <p class="eyebrow" style="margin-top:16px">TikTok / Instagram / YouTube Shorts 運用代行</p>
+    <h1>
+      <span class="salon">お店のSNSを、</span><span class="corp">自社のSNSを、</span><br>
+      <em>企画から撮影・運用まで</em>まるごと代行。
+    </h1>
+    <p class="lead">
+      企画・台本づくり、プロ機材での撮影、編集、投稿後の分析・改善までを一気通貫で。
+      <span class="salon">撮影日にご協力いただくだけで、月8本の動画が仕上がります。</span>
+      <span class="corp">撮影日にご協力いただくだけで、商業クオリティの動画が続けられる形で仕上がります。</span>
+    </p>
+    <div class="stats">
+      <div class="stat"><b>月8本</b><span>企画・台本の作成<br>（フルパックは実質16本）</span></div>
+      <div class="stat"><b>撮影1日</b><span>プロ機材とスタッフが<br>現場へ伺います</span></div>
+      <div class="stat"><b>約35時間</b><span>内製した場合の<br>月あたりの作業時間</span></div>
+      <div class="stat"><b>¥50,000<small>〜</small></b><span>月額（税抜）<br>月契約の場合</span></div>
+    </div>
+    <div class="hero-actions">
+      <a class="cta big" href="https://lin.ee/y0r6N4U" target="_blank" rel="noopener noreferrer">LINEで相談する →</a>
+      <span class="note">ご相談・お見積りは無料です。まずは現状のアカウントを拝見します</span>
+    </div>
+  </div>
+</section>
+
+<section id="inout" style="background:var(--alt)">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">1</span><h2><span class="salon">ホットペッパー運用との役割分担</span><span class="corp">いま使っている集客媒体の「中」と「外」</span></h2></div>
+    <div class="inout">
+      <div class="card">
+        <p class="k"><span class="salon">ホットペッパーの「中」</span><span class="corp">媒体の「中」</span></p>
+        <h3>すでに探している人に、選ばれる</h3>
+        <p class="salon">スタイル掲載・SEO・口コミ対策。「この地域で美容室を探している」お客様の中で上位に出て、比較検討で勝つための施策です。母数はエリアの検索数が上限になります。</p>
+        <p class="corp">ポータルサイト・検索広告・Googleマップなど。「いま探している」お客様の中で上位に出て、比較検討で勝つための施策です。母数は、その商圏の検索数が上限になります。</p>
+      </div>
+      <div class="card out">
+        <p class="k"><span class="salon">ホットペッパーの「外」＝ KREATES</span><span class="corp">媒体の「外」＝ KREATES</span></p>
+        <h3>まだ知らない人に、見つけてもらう</h3>
+        <p class="salon">TikTok・Instagram・YouTube Shorts。探していないお客様のスクロールを止めて、お店とスタッフを知ってもらう施策です。新規の母数そのものを増やせます。</p>
+        <p class="corp">TikTok・Instagram・YouTube Shorts。探していないお客様のスクロールを止めて、会社と人を知ってもらう施策です。指名検索そのものを増やせます。</p>
+      </div>
+    </div>
+    <p class="disc">※ 両者は競合せず補完関係にあります。<span class="salon">ホットペッパー運用と併用いただくことで、指名検索の増加とスタイル閲覧数の底上げが期待できます。</span><span class="corp">既存の集客施策と併用いただくことで、指名検索・直接のお問い合わせの増加が期待できます。</span></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-h"><span class="no">2</span><h2>内製すると、月におよそ35時間かかります</h2></div>
+    <div class="scroller">
+      <table>
+        <thead><tr><th>工程</th><th>実作業時間</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><th>企画・台本の作成（月8本）</th><td class="c">約5時間</td><td>構成・冒頭フック・テロップまで書き起こす時間</td></tr>
+          <tr><th>撮影（移動・セッティング込み）</th><td class="c">約8時間</td><td>8本分をまとめて撮影する場合の実測</td></tr>
+          <tr><th>編集・仕上げ（1本2時間 × 8本）</th><td class="c">約16時間</td><td>最も時間を要する工程です</td></tr>
+          <tr><th>素材整理・修正対応・投稿作業</th><td class="c">約6時間</td><td>データの管理や差し戻しにかかる時間</td></tr>
+          <tr><th>合計</th><td class="c"><b>約35時間</b></td><td><b>撮影プラン以上では、この35時間がまるごとなくなります</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="disc">※ 当社の実績にもとづく実作業時間です。ご担当者様の時間単価に置き換えて、ご比較ください。<br>※ 慣れていない場合はこれ以上を要するほか、<b>続けられずに止まってしまう</b>のが内製で最も多いケースです。</p>
+  </div>
+</section>
+
+<section id="plans" style="background:var(--alt)">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">3</span><h2>プラン ― どこまでお任せいただくかで選べます</h2></div>
+    <div class="plans">
+      <div class="plan">
+        <span class="badge soft">はじめやすい</span>
+        <div class="name">企画プラン</div>
+        <div class="price">¥50,000<small>/月</small></div>
+        <div class="single">単月のみ ¥60,000</div>
+        <p>伸びる<b>企画・台本を月8本</b>ご提供。撮影・編集は<span class="salon">貴店</span><span class="corp">貴社</span>で対応いただくプランです。</p>
+      </div>
+      <div class="plan">
+        <div class="name">編集プラン</div>
+        <div class="price">¥150,000<small>/月</small></div>
+        <div class="single">単月のみ ¥180,000</div>
+        <p>企画・台本に加えて<b>編集・仕上げまで代行</b>。撮影のみ<span class="salon">貴店</span><span class="corp">貴社</span>で行っていただきます。</p>
+      </div>
+      <div class="plan best">
+        <span class="badge">おすすめ</span>
+        <div class="name">撮影プラン</div>
+        <div class="price">¥240,000<small>/月</small></div>
+        <div class="single">単月のみ ¥300,000</div>
+        <p><b>撮影も編集もすべて代行。</b>当日スタッフに立っていただくだけで動画が仕上がります。</p>
+      </div>
+      <div class="plan">
+        <div class="name">フルパック</div>
+        <div class="price">¥320,000<small>/月</small></div>
+        <div class="single">単月のみ ¥400,000</div>
+        <p>上記すべて＋<b>アカウント設計・AB展開・分析改善・定例MTG</b>まで含む全部おまかせプラン。</p>
+      </div>
+    </div>
+
+    <div class="scroller" style="margin-top:16px">
+      <table>
+        <thead><tr><th>プラン内容</th><th class="c">企画<br>¥50,000</th><th class="c">編集<br>¥150,000</th><th class="c">撮影<br>¥240,000</th><th class="c">フルパック<br>¥320,000</th></tr></thead>
+        <tbody>
+          <tr><th>企画・台本作成（月8本）</th><td class="c dot">●代行</td><td class="c dot">●代行</td><td class="c dot">●代行</td><td class="c dot">●代行</td></tr>
+          <tr><th>撮影（月1日／機材・スタッフ込み）</th><td class="c">○自社で</td><td class="c">○自社で</td><td class="c dot">●代行</td><td class="c dot">●代行</td></tr>
+          <tr><th>編集・仕上げ（月8本）</th><td class="c">○自社で</td><td class="c dot">●代行</td><td class="c dot">●代行</td><td class="c dot">●代行</td></tr>
+          <tr><th>ABパターン展開（実質16本以上）</th><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c dot">●代行</td></tr>
+          <tr><th>アカウント設計・戦略立案（初回）</th><td class="c">+¥50,000</td><td class="c">+¥50,000</td><td class="c">+¥50,000</td><td class="c dot">●込み</td></tr>
+          <tr><th>媒体別の配信設計・投稿</th><td class="c">—</td><td class="c">—</td><td class="c">○ご相談</td><td class="c dot">●代行</td></tr>
+          <tr><th>数値分析・改善レポート</th><td class="c">—</td><td class="c">—</td><td class="c">—</td><td class="c dot">●代行</td></tr>
+          <tr><th>月1回の定例企画戦略MTG</th><td class="c">—</td><td class="c">—</td><td class="c">○</td><td class="c dot">●</td></tr>
+          <tr><th>チャットでの無制限相談</th><td class="c">○</td><td class="c">○</td><td class="c">○</td><td class="c dot">●</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint">← 横にスクロールできます →</p>
+    <p class="disc">● こちらで代行　○ ご利用・<span class="salon">貴店</span><span class="corp">貴社</span>で対応　— なし<br>
+      ※ 価格はすべて税抜。表示の月額は<b>半年契約以上</b>の場合の金額です。単月でのご依頼も承ります（各プランカード内の金額）。<br>
+      ※ 撮影は<b>1日あたり半日〜1日</b>を目安に、8本分をまとめて撮影します。撮影日を追加する場合は別途申し受けます。<br>
+      ※ 月契約は<b>最低6ヶ月</b>から。7ヶ月目以降は1ヶ月単位で継続・終了をお選びいただけます。</p>
+
+    <div class="grid g3" style="margin-top:20px">
+      <div class="card"><p class="k">1</p><h3>月額が下がる</h3><p>単月でのご依頼に比べ、<b>最大20%オフ</b>の月額でご利用いただけます。撮影プランなら月6万円、年間で72万円の差になります。</p></div>
+      <div class="card"><p class="k">2</p><h3>設計費5万円が無料</h3><p>アカウント設計・戦略立案（通常5万円）が<b>フルパックは無料</b>。他プランでも初回のみの費用で、以降は発生しません。</p></div>
+      <div class="card"><p class="k">3</p><h3>数字を見て直せる</h3><p>投稿後の反応を見て翌月の企画に反映できます。<b>単月では「作って終わり」</b>になり、改善のサイクルが回りません。</p></div>
+    </div>
+    <div class="grid g3" style="margin-top:12px">
+      <div class="card"><p class="k">オプション</p><h3>撮影日の追加</h3><p>＋¥100,000／日　当チームのスタッフを現場へ派遣し、設計した画角で撮影します</p></div>
+      <div class="card"><p class="k">オプション</p><h3>編集本数の追加</h3><p>＋¥100,000／8本　プロによる編集・仕上げを8本単位で追加します</p></div>
+      <div class="card"><p class="k">オプション</p><h3>アカウント設計・戦略立案</h3><p>＋¥50,000　SNS運用の土台となる設計・戦略立案（初回のみ／フルパックは込み）</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">4</span><h2>毎月の進み方</h2></div>
+    <div class="grid g4">
+      <div class="card"><p class="k">1週目</p><h3>企画・台本のご共有</h3><p>その月の8本の企画をお出しし、内容をご確認いただきます。</p></div>
+      <div class="card"><p class="k">2週目</p><h3>撮影</h3><p><span class="salon">定休日や営業前後に伺い、</span><span class="corp">休業日や業務の合間に伺い、</span>半日〜1日で8本分を撮影します。</p></div>
+      <div class="card"><p class="k">3週目</p><h3>編集・納品</h3><p>編集・仕上げを行い、投稿できる状態でお渡しします。</p></div>
+      <div class="card"><p class="k">4週目</p><h3>分析・翌月の設計</h3><p>数字を確認し、伸びた企画を翌月の台本に反映します。</p></div>
+    </div>
+
+    <div class="sec-h" style="margin-top:34px"><span class="no">5</span><h2>導入の流れ</h2></div>
+    <div class="grid g4">
+      <div class="card"><p class="k">1</p><h3>お打ち合わせ</h3><p><span class="salon">お店</span><span class="corp">貴社</span>の状況と目標をお伺いし、プランをご提案します。</p></div>
+      <div class="card"><p class="k">2</p><h3>アカウント設計</h3><p>誰に何を届けるか、投稿の方向性と目標数値を決めます。</p></div>
+      <div class="card"><p class="k">3</p><h3>企画・台本のご共有</h3><p>初月分の企画をお出しし、内容をご確認いただきます。</p></div>
+      <div class="card"><p class="k">4</p><h3>撮影・運用開始</h3><p>撮影日を調整して制作開始。以降は毎月このサイクルです。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="corp" style="background:var(--alt)">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">6</span><h2>これまでの制作実績</h2></div>
+    <div class="grid g3">
+      <div class="card"><p class="k">都内の商店街</p><h3>公式の連続ドラマ</h3><p>地域の店舗を横断して登場させ、街全体への来訪動機をつくりました。</p></div>
+      <div class="card"><p class="k">大型レジャー施設</p><h3>観光PRのショートドラマ</h3><p>施設紹介ではなく物語で見せることで、最後まで見られる構成にしました。</p></div>
+      <div class="card"><p class="k">地域の企業・店舗</p><h3>縦型ショート動画とSNS運用</h3><p>中小企業・商店街を中心に、継続的にご支援しています。</p></div>
+    </div>
+    <p class="disc">※ 守秘のため企業名は非公開としています。詳細は個別にご説明いたします。</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-h"><span class="no">6</span><h2>よくあるご質問</h2></div>
+    <details><summary>スタッフが顔出しを嫌がっています</summary>
+      <p class="a"><span class="salon">手元・施術シーン・後ろ姿を中心にした企画でも制作できます。</span><span class="corp">手元・作業風景・後ろ姿を中心にした企画でも制作できます。</span>顔出しできる方が何名いるかで企画の幅が変わりますので、初回の打ち合わせでご相談ください。</p></details>
+    <details><summary>どれくらいで結果が出ますか</summary>
+      <p class="a">3ヶ月を目安にお考えください。1〜2ヶ月目は当たる企画の型を探す期間で、3ヶ月目以降に伸びはじめるケースが多いです。</p></details>
+    <details><summary><span class="salon">撮影は営業中でもできますか</span><span class="corp">撮影は業務中でもできますか</span></summary>
+      <p class="a"><span class="salon">定休日や営業前後での撮影が中心です。</span><span class="corp">休業日や業務の合間での撮影が中心です。</span>1回あたり半日〜1日で、8本分をまとめて撮影します。日程は前月中に調整いたします。</p></details>
+    <details><summary>途中でプランを変更できますか</summary>
+      <p class="a">翌月からの変更を承ります。企画プランからはじめて、慣れてきたら撮影プランへ、といったご利用も可能です。</p></details>
+    <details><summary>納品した動画は自由に使えますか</summary>
+      <p class="a"><span class="salon">貴店の広告・店内サイネージ・採用など、</span><span class="corp">貴社の広告・展示会・店頭サイネージ・採用など、</span>用途を問わずご利用いただけます。データもお渡しします。</p></details>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="note-box">
+      <h3>成果についてのご注意</h3>
+      <ul>
+        <li>SNSの再生数・フォロワー数・ご来店数は、<b>同じ結果を必ずお約束するものではありません。</b></li>
+        <li>効果は<b>エリア（商圏・競合状況）</b>や<b>業種</b>により出やすさが異なります。</li>
+        <li>各媒体のアルゴリズム変更により、結果は前後します。</li>
+        <li><b>ご出演いただくスタッフ様のご協力</b>が結果を大きく左右します。撮影日のご調整にご協力をお願いいたします。</li>
+        <li>数字が動きはじめるまでに<b>3ヶ月程度</b>を見込んでいます。単月でのご依頼は制作物のご提供が中心となります。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="final">
+      <h2>まずは、現状のアカウントを拝見するところから。</h2>
+      <p>いまの投稿内容と<span class="salon">競合店</span><span class="corp">競合他社</span>の状況を確認したうえで、どのプランが合うかをご提案します。<br>
+        ご相談・お見積りは無料です。企画のみ・編集のみといった部分的なご相談も承っております。</p>
+      <a class="cta big" href="https://lin.ee/y0r6N4U" target="_blank" rel="noopener noreferrer">LINEで相談する →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo" style="font-size:16px;margin-bottom:8px"><i style="width:18px;height:18px"></i>KREATES</div>
+    KREATES ショート動画制作・SNS運用代行　／　担当：加藤 誠也<br>
+    seiya@kreates.net　／　080-4150-2339
+    <p class="disc">TikTok・Instagram・YouTube Shorts は各社の商標です。価格はすべて税抜表示です。</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".tab").forEach(function(b){
+  b.addEventListener("click",function(){
+    document.body.dataset.aud=b.dataset.aud;
+    document.querySelectorAll(".tab").forEach(function(x){x.setAttribute("aria-selected", x===b ? "true":"false")});
+  });
+});
+</script>
+</body>
+</html>
