@@ -123,6 +123,23 @@ ul{margin:0;padding-left:1.15em}
 .final p{color:var(--soft);font-size:14px;margin-bottom:20px}
 footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);font-size:12.5px}
 .disc{font-size:11.5px;color:var(--faint);margin-top:10px}
+
+  /* 動画（2026-09-21） */
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(20px,4vw,50px);align-items:center}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+  .device{max-width:270px;margin:6px auto 0}
+  .phone{border-radius:34px;background:#15151d;padding:10px;box-shadow:0 24px 54px -22px rgba(55,48,163,.45)}
+  .phone video{display:block;width:100%;border-radius:25px;background:#000}
+  .device-cap{text-align:center;font-size:11.5px;color:var(--faint);margin-top:9px}
+  .works{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  @media(max-width:760px){.works{grid-template-columns:1fr}}
+  .work{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  .work .v{background:#0d0d12;aspect-ratio:16/10;overflow:hidden}
+  .work video{width:100%;height:100%;object-fit:contain;display:block}
+  .work .t{padding:14px 16px 16px}
+  .work .no{font-size:11.5px;font-weight:800;color:var(--brand);letter-spacing:.08em}
+  .work h3{font-size:15.5px;margin:4px 0 5px}
+  .work p{font-size:13px;color:var(--soft)}
 </style>
 </head>
 <body>
@@ -141,7 +158,8 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
 </header>
 
 <section class="hero">
-  <div class="wrap">
+  <div class="wrap hero-grid">
+   <div>
     <p class="eyebrow">TikTok / Instagram / YouTube Shorts 運用代行</p>
     <h1>
       SNSを、<em>企画から撮影・運用まで</em><br>まるごと代行。
@@ -160,6 +178,16 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
       <a class="cta big" href="https://lin.ee/y0r6N4U" target="_blank" rel="noopener noreferrer">LINEで相談する →</a>
       <span class="note">ご相談・お見積りは無料です。まずは現状のアカウントを拝見します</span>
     </div>
+   </div>
+   <div>
+      <div class="device">
+        <div class="phone">
+          <video src="videos/work-01-shortdrama.mp4" poster="videos/work-01.jpg"
+                 autoplay muted loop playsinline preload="metadata" aria-label="制作したショートドラマのダイジェスト"></video>
+        </div>
+        <p class="device-cap">実際に制作した映像のダイジェスト（音なし）</p>
+      </div>
+   </div>
   </div>
 </section>
 
@@ -300,6 +328,19 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
   <div class="wrap">
     <div class="sec-h"><span class="no">6</span><h2>これまでの実績</h2></div>
     <p class="k" style="font-size:12.5px;font-weight:800;color:var(--brand);letter-spacing:.06em;margin-bottom:12px">映像制作</p>
+    <div class="works" style="margin-bottom:14px">
+      <div class="work">
+        <div class="v"><video src="videos/work-01-shortdrama.mp4" poster="videos/work-01.jpg" controls muted playsinline preload="none"></video></div>
+        <div class="t"><p class="no">01</p><h3>ショートドラマ（採用）</h3>
+          <p>整体院の求人動画。出演者の演技と字幕で物語として見せ、最後まで見てもらう構成にしています。縦型・寄りのカット中心。</p></div>
+      </div>
+      <div class="work">
+        <div class="v"><video src="videos/work-02-promotion.mp4" poster="videos/work-02.jpg" controls muted playsinline preload="none"></video></div>
+        <div class="t"><p class="no">02</p><h3>プロモーション映像（スポーツ）</h3>
+          <p>大会のPR映像。題字・照明を活かした撮影とインタビューを組み合わせ、横型で世界観をつくっています。</p></div>
+      </div>
+    </div>
+    <p class="disc" style="margin-bottom:18px">※ 各動画は実際の納品物から編集したダイジェスト（各10秒・音なし）です。タップすると再生します。</p>
     <div class="grid g3">
       <div class="card"><p class="k">都内の商店街</p><h3>公式の連続ドラマ</h3><p>地域の店舗を横断して登場させ、街全体への来訪動機をつくりました。</p></div>
       <div class="card"><p class="k">大型レジャー施設</p><h3>観光PRのショートドラマ</h3><p>施設紹介ではなく物語で見せることで、最後まで見られる構成にしました。</p></div>
@@ -391,5 +432,16 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
   </div>
 </footer>
 
+<script>
+/* autoplay-fallback: ブラウザによっては muted でも自動再生が始まらないため、明示的に再生する */
+(function(){
+  var v=document.querySelector('.phone video');
+  if(!v) return;
+  var go=function(){ var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){}); };
+  go();
+  document.addEventListener('visibilitychange',function(){ if(!document.hidden) go(); });
+  ['touchstart','click','scroll'].forEach(function(e){ window.addEventListener(e,go,{once:true,passive:true}); });
+})();
+</script>
 </body>
 </html>
