@@ -158,8 +158,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
 </header>
 
 <section class="hero">
-  <div class="wrap hero-grid">
-   <div>
+  <div class="wrap">
     <p class="eyebrow">TikTok / Instagram / YouTube Shorts 運用代行</p>
     <h1>
       SNSを、<em>企画から撮影・運用まで</em><br>まるごと代行。
@@ -178,16 +177,6 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
       <a class="cta big" href="https://lin.ee/y0r6N4U" target="_blank" rel="noopener noreferrer">LINEで相談する →</a>
       <span class="note">ご相談・お見積りは無料です。まずは現状のアカウントを拝見します</span>
     </div>
-   </div>
-   <div>
-      <div class="device">
-        <div class="phone">
-          <video src="videos/work-01-shortdrama.mp4" poster="videos/work-01.jpg"
-                 autoplay muted loop playsinline preload="metadata" aria-label="制作したショートドラマのダイジェスト"></video>
-        </div>
-        <p class="device-cap">実際に制作した映像のダイジェスト（音なし）</p>
-      </div>
-   </div>
   </div>
 </section>
 
@@ -432,16 +421,5 @@ footer{border-top:1px solid var(--line);padding:22px 0 50px;color:var(--faint);f
   </div>
 </footer>
 
-<script>
-/* autoplay-fallback: ブラウザによっては muted でも自動再生が始まらないため、明示的に再生する */
-(function(){
-  var v=document.querySelector('.phone video');
-  if(!v) return;
-  var go=function(){ var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){}); };
-  go();
-  document.addEventListener('visibilitychange',function(){ if(!document.hidden) go(); });
-  ['touchstart','click','scroll'].forEach(function(e){ window.addEventListener(e,go,{once:true,passive:true}); });
-})();
-</script>
 </body>
 </html>
